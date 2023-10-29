@@ -25,7 +25,7 @@ To get started with the project, follow these instructions:
    npm install
    ```
 
-### Installation
+### Usage
 
 1. Start the server:
 

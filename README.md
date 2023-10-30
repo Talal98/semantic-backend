@@ -35,6 +35,14 @@ To get started with the project, follow these instructions:
 
 2. The server will start running at http://localhost:3001
 
+### Test Cases
+
+To run the test cases:
+
+```sh
+npm test
+```
+
 ### Known Limitations:
 
 1. The number of iterations is fixed to 10.

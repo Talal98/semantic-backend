@@ -49,6 +49,33 @@ export class Graph {
     }
   }
 
+  deleteEdge(fromNodeId: number, toNodeId: number) {
+    if (fromNodeId === toNodeId) {
+      throw new Error("Both Node Same");
+    }
+    const fromNode = this.graphData.get(fromNodeId);
+    const toNode = this.graphData.get(toNodeId);
+    if (fromNode && toNode) {
+      if (
+        fromNode.outbound_links.includes(toNodeId) ||
+        toNode.inbound_links.includes(fromNodeId)
+      ) {
+        fromNode.outbound_links = fromNode.outbound_links.filter(
+          (id) => id !== toNodeId
+        );
+        toNode.inbound_links = toNode.inbound_links.filter(
+          (id) => id !== fromNodeId
+        );
+      } else {
+        throw new Error("Edge doesn't exists");
+      }
+    } else {
+      throw new Error(
+        `Nodes with IDs ${fromNodeId} and/or ${toNodeId} do not exist`
+      );
+    }
+  }
+
   getGraphNode(id: number): GraphNode | undefined {
     return this.graphData.get(id);
   }

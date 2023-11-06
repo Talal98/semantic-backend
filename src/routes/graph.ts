@@ -1,6 +1,7 @@
 import {
   addEdge,
   addNode,
+  deleteEdge,
   getGraphNodes,
   getInboundLinks,
   getOutboundLinks,
@@ -18,5 +19,7 @@ router.get("/pageRank", getPageRank);
 router.patch("/", addEdge);
 
 router.post("/", addNode);
+
+router.delete("/", deleteEdge);
 
 export default router;

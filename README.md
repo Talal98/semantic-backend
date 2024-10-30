@@ -11,7 +11,7 @@ To get started with the project, follow these instructions:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/talal-98/semantic-backend.git
+   git clone https://github.com/talal98/semantic-backend.git
    ```
 
 2. Navigate to the project directory:
